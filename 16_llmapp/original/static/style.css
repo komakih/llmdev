@@ -1,0 +1,125 @@
+/* 全体の背景とフォント設定 */
+body {
+  font-family: Arial, sans-serif; 
+  background-color: #f4f4f9; 
+  margin: 0; 
+  padding: 0; 
+}
+
+/* メインコンテナのスタイル */
+.container {
+  width: 100%; 
+  max-width: 800px; 
+  margin: 50px auto; 
+  background-color: #fff; 
+  padding: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* チャットボックスのスタイル */
+.chat-box {
+  border: 1px solid #ddd; 
+  padding: 20px; 
+  height: 400px; 
+  overflow-y: auto; 
+  margin-bottom: 20px; 
+  background-color: #fafafa; 
+  border-radius: 5px; 
+}
+
+/* ユーザーとボットのメッセージのスタイル */
+.user-message, .bot-message {
+  position: relative; 
+  padding: 10px; 
+  margin-bottom: 10px; 
+  border-radius: 5px; 
+  max-width: 90%; 
+  word-wrap: break-word; 
+}
+
+/* ユーザーのメッセージスタイル */
+.user-message {
+  background-color: #08f1dd; 
+  text-align: right; 
+  margin-left: auto; 
+}
+
+/* ボットのメッセージスタイル */
+.bot-message {
+  background-color: #e2e3e5; 
+  text-align: left; 
+}
+
+/* 吹き出しの三角形を作成するスタイル */
+.user-message:after, .bot-message:after {
+  content: ''; 
+  position: absolute; 
+  width: 0; height: 0; 
+  border-left: 10px solid transparent; 
+  border-right: 10px solid transparent; 
+  border-top: 10px solid; 
+}
+
+.user-message:after {
+  right: -10px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  border-top-color: #08e9f1; 
+}
+
+.bot-message:after {
+  left: -10px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  border-top-color: #e2e3e5; 
+}
+
+/* 入力ボックスのスタイル */
+.input-box {
+  display: flex; 
+  align-items: flex-start; 
+  justify-content: space-between; 
+}
+
+/* 入力エリア（textarea）のスタイル */
+.input-box textarea {
+  width: 85%; 
+  padding: 10px; 
+  border-radius: 5px; 
+  border: 1px solid #ccc; 
+  font-size: 16px; 
+  resize: vertical; 
+  min-height: 50px; 
+}
+
+/* 送信ボタンのスタイル */
+.input-box button {
+  padding: 10px 15px; 
+  background-color: #ffb300; 
+  color: #fff; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+/* 送信ボタンのホバー時のスタイル */
+.input-box button:hover {
+  background-color: #0056b3; 
+}
+
+/* 履歴を消去するボタンのスタイル */
+.clear-button {
+  padding: 10px 15px; 
+  background-color: #000000; 
+  color: #fff; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  margin-top: 10px; 
+}
+
+/* 履歴を消去するボタンのホバー時のスタイル */
+.clear-button:hover {
+  background-color: #ff0000; 
+}
